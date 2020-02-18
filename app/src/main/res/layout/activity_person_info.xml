@@ -8,6 +8,7 @@
     android:orientation="vertical"
     android:background="@color/gray9">
 
+<!--    标题栏-->
     <com.foodsharetest.android.widget.TitleLayout
         android:id="@+id/tl_title"
         android:layout_width="match_parent"

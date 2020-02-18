@@ -2,7 +2,11 @@
 
 ## 一、简介
 
+Android实现的美食分享平台APP
 
+个人独立开发
+
+[Github：https://github.com/chenchenxh/FoodShareTest](https://github.com/chenchenxh/FoodShareTest)
 
 ## 二、功能
 
