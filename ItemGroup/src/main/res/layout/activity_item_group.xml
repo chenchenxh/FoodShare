@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.zx.itemgroup.activity.MainActivity">
+
+    <com.zx.itemgroup.widget.ItemGroup
+        android:id="@+id/name_ig"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:edt_hint_content="请输入姓名"
+        app:jt_visible="false"
+        app:paddingLeft="15dp"
+        app:title="姓名" />
+
+    <com.zx.itemgroup.widget.ItemGroup
+        android:id="@+id/id_card_ig"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:edt_hint_content="请输入身份证号"
+        app:jt_visible="false"
+        app:paddingLeft="15dp"
+        app:title="身份证" />
+
+    <com.zx.itemgroup.widget.ItemGroup
+        android:id="@+id/select_birthday_ig"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        app:edt_hint_content="请选择出生日期"
+        app:isEditable="false"
+        app:paddingLeft="15dp"
+        app:title="出生日期" />
+
+    <com.zx.itemgroup.widget.ItemGroup
+        android:id="@+id/select_city_ig"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        app:edt_hint_content="请选择您所在的城市"
+        app:isEditable="false"
+        app:paddingLeft="15dp"
+        app:title="所在城市" />
+
+    <Button
+        android:id="@+id/submit_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:text="提交" />
+
+    <!--结果-->
+    <TextView
+        android:id="@+id/result_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp" />
+
+</LinearLayout>

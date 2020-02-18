@@ -1,0 +1,7 @@
+<litepal>
+    <dbname value="food_db"/>
+    <version value = "1"/>
+    <list>
+        <mapping class="com.foodsharetest.android.db.model.User"/>
+    </list>
+</litepal>

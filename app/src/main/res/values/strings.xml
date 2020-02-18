@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">FoodShareTest</string>
+    <string name="action_settings">Settings</string>
+
+    <!--我的-->
+    <string name="my_item1">关注</string>
+    <string name="my_item2">粉丝</string>
+    <string name="my_item3">收藏</string>
+    <string name="my_item4">最近浏览</string>
+    <string name="my_account">vip</string>
+    <string name="my_name">李小彤</string>
+    <string name="title_activity_settings">Settings</string>
+
+    <!--    个人信息（编辑信息）-->
+    <string name="my_id">ID号</string>
+    <string name="my_name2">昵称</string>
+    <string name="my_region">地区</string>
+    <string name="my_gender">性别</string>
+    <string name="my_brithday">生日</string>
+
+    <!--    设置-->
+    <string name="setting_item1">个人信息</string>
+    <string name="setting_item2">收获地址</string>
+    <string name="setting_item3">关于</string>
+    <string name="exit">退出登录</string>
+
+    <!--    注册登录-->
+    <string name="account_name">用户名</string>
+    <string name="passwword">密码</string>
+    <string name="new_password">新密码</string>
+    <string name="repeat_password">重复密码</string>
+    <string name="register">注册</string>
+    <string name="login">登录</string>
+    <string name="remember">记住密码</string>
+
+
+</resources>

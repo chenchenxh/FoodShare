@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+<!--        用户名输入-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/input_background"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+
+<!--            用户名输入框，限制中文输入-->
+            <EditText
+                android:id="@+id/et_account_name"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:inputType="textVisiblePassword"
+                android:background="@android:color/transparent"
+                android:hint="请输入用户名"
+                android:paddingLeft="5dp"
+                android:textColor="@color/black0"
+                android:textSize="16sp"
+                android:drawableLeft="@drawable/ic_person"
+                android:drawablePadding="8dp"/>
+
+            <ImageView
+                android:id="@+id/iv_more_accout"
+                android:layout_width="20dp"
+                android:layout_height="25dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:src="@mipmap/arrow_down" />
+
+        </LinearLayout>
+
+<!--        密码输入-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/input_background"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+<!--            密码输入框，限制中文输入-->
+            <EditText
+                android:id="@+id/et_password"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:hint="请输入密码"
+                android:inputType="textPassword"
+                android:paddingLeft="5dp"
+                android:textColor="@color/black0"
+                android:textSize="16sp"
+                android:drawablePadding="8dp"
+                android:drawableLeft="@drawable/ic_lock_black"/>
+
+            <ImageView
+                android:id="@+id/iv_eye"
+                android:layout_width="20dp"
+                android:layout_height="25dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/ic_eye" />
+
+        </LinearLayout>
+
+<!--        记住密码-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp">
+
+            <CheckBox
+                android:id="@+id/cb_remember"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/remember"/>
+        </LinearLayout>
+
+<!--        注册登录按钮-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/register"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/register" />
+
+            <Button
+                android:id="@+id/login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="30dp"
+                android:text="@string/login" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
