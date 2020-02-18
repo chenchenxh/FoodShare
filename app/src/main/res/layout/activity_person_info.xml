@@ -80,13 +80,6 @@
         app:paddingLeft="@dimen/padding_left_and_right"
         app:title="生日" />
 
-    <Button
-        android:id="@+id/bt_save_info"
-        android:layout_marginTop="5dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/white"
-        android:text="保存"/>
 
 
 </LinearLayout>
