@@ -1,5 +1,6 @@
 package com.foodsharetest.android.ui.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -9,6 +10,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
+import com.foodsharetest.android.AddArticle;
 import com.foodsharetest.android.R;
 import com.foodsharetest.android.util.ActivityCollector;
 import com.foodsharetest.android.util.DataGenerator;
@@ -45,22 +47,31 @@ public class ButtomTab extends AppCompatActivity {
         tab_layout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
-                onTabItemSelected(tab.getPosition());
+                //如果是点击第三个，则是添加好友圈，否则则更新fragment
+                if(tab.getPosition()==2){
+                    Intent intent = new Intent(ButtomTab.this, AddArticle.class);
+                    startActivity(intent);
+                }else {
+                    onTabItemSelected(tab.getPosition());
 
-                // Tab 选中之后，改变各个Tab的状态
-                for (int i = 0; i < tab_layout.getTabCount(); i++) {
-                    View view = tab_layout.getTabAt(i).getCustomView();
-                    ImageView icon = (ImageView) view.findViewById(R.id.tab_content_image);
-                    TextView text = (TextView) view.findViewById(R.id.tab_content_text);
+                    // Tab 选中之后，改变各个Tab的状态
+                    for (int i = 0; i < tab_layout.getTabCount(); i++) {
+                        if(i==2) continue;
+                        View view = tab_layout.getTabAt(i).getCustomView();
+                        ImageView icon = (ImageView) view.findViewById(R.id.tab_content_image);
+                        TextView text = (TextView) view.findViewById(R.id.tab_content_text);
 
-                    if (i == tab.getPosition()) { // 选中状态，修改字体颜色和图片，背景未实现
-//                        view.setBackgroundColor(Color.parseColor("#a9a9a9"));
-                        icon.setImageResource(DataGenerator.mTabResPressed[i]);
-                        text.setTextColor(getResources().getColor(android.R.color.black));
-                    } else {// 未选中状态
-//                        view.setBackgroundColor(Color.parseColor("#FFFFFF"));
-                        icon.setImageResource(DataGenerator.mTabRes[i]);
-                        text.setTextColor(getResources().getColor(android.R.color.darker_gray));
+                        if (i == tab.getPosition()) { // 选中状态，修改字体颜色和图片，背景未实现
+                            Log.d("food","tab1");
+                            //                        view.setBackgroundColor(Color.parseColor("#a9a9a9"));
+                            icon.setImageResource(DataGenerator.mTabResPressed[i]);
+                            text.setTextColor(getResources().getColor(android.R.color.black));
+                        } else {// 未选中状态
+                            Log.d("food","tab2");
+                            //                        view.setBackgroundColor(Color.parseColor("#FFFFFF"));
+                            icon.setImageResource(DataGenerator.mTabRes[i]);
+                            text.setTextColor(getResources().getColor(android.R.color.darker_gray));
+                        }
                     }
                 }
             }
@@ -78,7 +89,7 @@ public class ButtomTab extends AppCompatActivity {
         });
 
         // 提供自定义的布局添加Tab，注意此处的加载页面需要在设置Listener之后，不然会导致第一次点击事件失效
-        for(int i=0;i<4;i++){
+        for(int i = 0; i<5; i++){
             tab_layout.addTab(tab_layout.newTab().setCustomView(DataGenerator.getTabView(this,i)));
         }
 
@@ -96,10 +107,10 @@ public class ButtomTab extends AppCompatActivity {
                 frag = framensts[1];
                 break;
 
-            case 2:
+            case 3:
                 frag = framensts[2];
                 break;
-            case 3:
+            case 4:
                 frag = framensts[3];
                 break;
         }
