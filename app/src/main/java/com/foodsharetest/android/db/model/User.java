@@ -11,7 +11,7 @@ LitePal巨坑之一！下面的属性remember本可以设计为boolean值，但�
 可能如int和boolean这种基本类型可能都是设为不可更改（但是第一次set还是成功了呀。。。后面就失败了）
  **/
 public class User extends LitePalSupport implements Comparable<User> {
-    private int id;
+    private long id;
     private String name;
     private String password;
     private Integer remember;
@@ -97,7 +97,7 @@ public class User extends LitePalSupport implements Comparable<User> {
         this.remember = remember;
     }
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 

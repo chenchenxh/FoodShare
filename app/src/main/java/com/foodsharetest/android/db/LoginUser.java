@@ -17,7 +17,7 @@ import java.util.List;
 public class LoginUser extends Application {
     private static LoginUser login_user = new LoginUser();
     private static User _user;
-    private int id;
+    private long id;
     private String name;
     private byte[] portrait;
     private String region;
@@ -89,7 +89,7 @@ public class LoginUser extends Application {
                 '}';
     }
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 

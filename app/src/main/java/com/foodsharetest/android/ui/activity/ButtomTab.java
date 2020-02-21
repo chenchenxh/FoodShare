@@ -62,12 +62,10 @@ public class ButtomTab extends AppCompatActivity {
                         TextView text = (TextView) view.findViewById(R.id.tab_content_text);
 
                         if (i == tab.getPosition()) { // 选中状态，修改字体颜色和图片，背景未实现
-                            Log.d("food","tab1");
                             //                        view.setBackgroundColor(Color.parseColor("#a9a9a9"));
                             icon.setImageResource(DataGenerator.mTabResPressed[i]);
                             text.setTextColor(getResources().getColor(android.R.color.black));
                         } else {// 未选中状态
-                            Log.d("food","tab2");
                             //                        view.setBackgroundColor(Color.parseColor("#FFFFFF"));
                             icon.setImageResource(DataGenerator.mTabRes[i]);
                             text.setTextColor(getResources().getColor(android.R.color.darker_gray));

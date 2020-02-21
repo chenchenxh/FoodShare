@@ -48,6 +48,7 @@ public class PersonPageFragment extends Fragment implements View.OnClickListener
     public void onResume(){
         super.onResume();
         //在onStart中init，修改信息后返回不会出现没有修改的情况
+        loginUser.reinit();
         initInfo();
     }
 
