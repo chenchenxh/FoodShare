@@ -33,4 +33,5 @@ dependencies {
     implementation 'com.lqr.optionitemview:library:1.0.7'
     implementation 'com.contrarywind:Android-PickerView:4.1.9'
     implementation 'com.google.code.gson:gson:2.8.6'
+    implementation 'com.github.mcxtzhang:SwipeDelMenuLayout:V1.3.0'
 }

@@ -19,4 +19,7 @@
     <!--界面的padding-->
     <dimen name="padding_top_and_bottom">30dp</dimen>
     <dimen name="padding_left_and_right">15dp</dimen>
+
+    <!--消息框的上下margin-->
+    <dimen name="message_padding">3dp</dimen>
 </resources>

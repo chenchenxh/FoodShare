@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mcxtzhang.swipemenulib.SwipeMenuLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:paddingBottom="1dp">
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/message_padding">
+
+        <com.foodsharetest.android.widget.RoundImageView
+            android:id="@+id/header"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@mipmap/default_header"
+            android:layout_marginLeft="@dimen/padding_left_and_right"
+            android:layout_marginRight="@dimen/padding_left_and_right"
+            android:layout_marginBottom="@dimen/message_padding"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:background="?android:attr/selectableItemBackground"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:textStyle="bold"
+                android:text="Title" />
+
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:background="?android:attr/selectableItemBackground"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:text="Text"
+                android:paddingBottom="@dimen/message_padding"/>
+            <View
+                android:layout_gravity="bottom"
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:alpha="0.5"
+                android:background="@android:color/darker_gray"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 以下都是侧滑菜单的内容依序排列 -->
+    <Button
+        android:id="@+id/delete_item"
+        android:layout_width="60dp"
+        android:layout_height="match_parent"
+        android:background="@color/red0"
+        android:text="删除"
+        android:clickable="true"
+        android:textColor="@android:color/white"/>
+</com.mcxtzhang.swipemenulib.SwipeMenuLayout>
