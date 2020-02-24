@@ -3,5 +3,6 @@
     <version value = "1"/>
     <list>
         <mapping class="com.foodsharetest.android.db.model.User"/>
+        <mapping class="com.foodsharetest.android.db.model.Article"/>
     </list>
 </litepal>

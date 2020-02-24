@@ -12,7 +12,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
-        <activity android:name=".AddArticle"></activity>
+        <activity android:name=".ui.activity.AddArticle"></activity>
         <activity android:name=".ui.activity.EditName" />
         <activity android:name=".ui.activity.PersonInfo" />
         <activity android:name=".ui.activity.Setting" />

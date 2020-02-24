@@ -2,6 +2,7 @@ package com.foodsharetest.android;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -23,6 +24,5 @@ public class FoodShareTest extends AppCompatActivity {
             LitePal.deleteDatabase("food_db");
             (new ToastUtils()).showShort(this,"删除数据库成功");
         }
-
     }
 }

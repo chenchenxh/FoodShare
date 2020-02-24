@@ -5,6 +5,7 @@ import android.util.Log;
 
 import androidx.annotation.Nullable;
 
+import com.foodsharetest.android.db.model.Article;
 import com.foodsharetest.android.db.model.User;
 
 import org.litepal.LitePal;
@@ -75,6 +76,11 @@ public class LoginUser extends Application {
         login_user.gender = null;
         login_user.brithday = null;
         return true;
+    }
+
+    //需要自定义一个获取Article的函数，默认的get无效
+    public List<Article> getArticleListFromLitePal(){
+        return LitePal.where("user_id=?",String.valueOf(this.id)).find(Article.class);
     }
 
     @Override

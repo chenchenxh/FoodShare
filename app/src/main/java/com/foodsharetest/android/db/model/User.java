@@ -5,10 +5,16 @@ import android.util.Log;
 
 import androidx.annotation.NonNull;
 
+import org.litepal.LitePal;
 import org.litepal.crud.LitePalSupport;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 /**
 LitePal巨坑之一！下面的属性remember本可以设计为boolean值，但是LitePal的boolean值update不了！int尝试也不行！所以只能用Integer代替。
-可能如int和boolean这种基本类型可能都是设为不可更改（但是第一次set还是成功了呀。。。后面就失败了）
+ 解决：使用update更新数据
  **/
 public class User extends LitePalSupport implements Comparable<User> {
     private long id;
@@ -19,7 +25,7 @@ public class User extends LitePalSupport implements Comparable<User> {
     private String region;
     private String gender;
     private String brithday;
-
+    private List<Article> articleList = new ArrayList<>();
 
     @Override
     public String toString() {
@@ -28,7 +34,6 @@ public class User extends LitePalSupport implements Comparable<User> {
                 ", name='" + name + '\'' +
                 ", password='" + password + '\'' +
                 ", remember=" + remember +
-                ", portrait='" + portrait + '\'' +
                 ", region='" + region + '\'' +
                 ", gender='" + gender + '\'' +
                 ", brithday='" + brithday + '\'' +
@@ -37,7 +42,6 @@ public class User extends LitePalSupport implements Comparable<User> {
 
     //check是传入未MD5加密的
     public boolean checkPassword(String str){
-//        if (remember.equals(0)) str = com.foodsharetest.android.util.MD5.md5(str);
         if (password.equals(str)) return true;
         else return false;
     }
@@ -55,6 +59,19 @@ public class User extends LitePalSupport implements Comparable<User> {
     @Override
     public int compareTo(@NonNull User User) {
         return this.getName().compareTo(User.getName());
+    }
+
+    //需要自定义一个获取Article的函数，默认的get无效
+    public List<Article> getArticleListFromLitePal(){
+        return LitePal.where("user_id=?",String.valueOf(id)).find(Article.class);
+    }
+
+    public List<Article> getArticleList() {
+        return articleList;
+    }
+
+    public void setArticleList(List<Article> articleList) {
+        this.articleList = articleList;
     }
 
     public byte[] getPortrait() {

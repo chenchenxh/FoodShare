@@ -13,9 +13,4 @@
         app:iconifiedByDefault="false"
         app:queryHint="请输入搜索内容"
         />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycler_view_message"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
 </LinearLayout>
