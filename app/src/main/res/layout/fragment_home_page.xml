@@ -4,13 +4,37 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-    <androidx.appcompat.widget.SearchView
-        android:id="@+id/search_view"
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_layout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:focusable="false"
-        android:focusableInTouchMode="true"
-        app:iconifiedByDefault="false"
-        app:queryHint="请输入搜索内容"
-        />
+        app:tabSelectedTextColor="@android:color/black"
+        app:tabTextColor="@android:color/darker_gray"
+        android:layout_height="50dp"
+        app:tabRippleColor="@null"
+        app:tabGravity="center">
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:text="关注"/>
+
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="推荐"/>
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <View android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:alpha="0.6"
+        android:background="@android:color/darker_gray" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 </LinearLayout>

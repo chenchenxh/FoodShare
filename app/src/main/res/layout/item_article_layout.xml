@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/padding_left_and_right"
+    android:paddingRight="@dimen/padding_left_and_right">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.foodsharetest.android.widget.RoundImageView
+            android:id="@+id/header"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@mipmap/default_header"
+            android:layout_marginTop="@dimen/message_padding"
+            android:layout_marginBottom="@dimen/message_padding"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingTop="4dp"
+            android:paddingBottom="2dp"
+            android:paddingLeft="@dimen/padding_left_and_right">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:singleLine="true"
+                android:text="Name"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="time"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="7"
+        android:text="lsjdflkajsdflaksdfjalkdlsjdflkajsdflaksdfjalkdlsjdflkajsdflaksdfjalkdlsjdflkajsdflaksdfjalkdlsjdflkajsdflaksdfjalkdlsjdflkajsdflaksdfjalkdlsjdflkajsdflaksdfjalkdlsjdflkajsdflaksdfjalkdlsjdflkajsdflaksdfjalkdlsjdflkajsdflaksdfjalkdlsjdflkajsdflaksdfjalkdlsjdflkajsdflaksdfjalkdlsjdflkajsdflaksdfjalkdlsjdflkajsdflaksdfjalkdlsjdflkajsdflaksdfjalkdlsjdflkajsdflaksdfjalkdlsjdflkajsdflaksdfjalkdlsjdflkajsdflaksdfjalkdlsjdflkajsdflaksdfjalkdlsjdflkajsdflaksdfjalkdlsjdflkajsdflaksdfjalkd" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp">
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_share"/>
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_favorite"/>
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_comment"/>
+
+    </LinearLayout>
+</LinearLayout>

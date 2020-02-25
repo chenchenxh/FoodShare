@@ -1,15 +1,9 @@
 package com.foodsharetest.android.ui.fragment;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Adapter;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.LinearLayout;
-import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -42,8 +36,8 @@ public class MessagePageFragment extends Fragment{
         view = inflater.inflate(R.layout.fragment_message_page, container, false);
         vpager = (ViewPager)view.findViewById(R.id.view_pager);
         tabLayout = (TabLayout)view.findViewById(R.id.tab_layout);
-        message_view = layoutInflater.inflate(R.layout.fragment_message_message_pager, null,false);
-        inform_view = layoutInflater.inflate(R.layout.fragment_message_inform_pager, null,false);
+        message_view = layoutInflater.inflate(R.layout.viewpager_message_pager, null,false);
+        inform_view = layoutInflater.inflate(R.layout.viewpager_inform_pager, null,false);
         recyclerView_message = (RecyclerView)message_view.findViewById(R.id.recycler_view_message);
         recyclerView_inform = (RecyclerView)inform_view.findViewById(R.id.recycler_view_inform);
 
