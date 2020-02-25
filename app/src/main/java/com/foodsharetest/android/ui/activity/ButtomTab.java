@@ -44,7 +44,6 @@ public class ButtomTab extends AppCompatActivity {
         tab_layout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
-                Log.d("food","click");
                 //如果是点击第三个，则是添加好友圈，否则则更新fragment
                 if(tab.getPosition()==2){
                     Intent intent = new Intent(ButtomTab.this, AddArticle.class);
