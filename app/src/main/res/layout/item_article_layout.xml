@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:paddingLeft="@dimen/padding_left_and_right"
-    android:paddingRight="@dimen/padding_left_and_right">
+    android:paddingRight="@dimen/padding_left_and_right"
+    android:background="@color/white"
+    android:layout_marginBottom="5dp">
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/message_padding"
+        android:paddingBottom="@dimen/message_padding">
         <com.foodsharetest.android.widget.RoundImageView
             android:id="@+id/header"
             android:layout_width="50dp"
@@ -22,25 +26,36 @@
             android:paddingBottom="2dp"
             android:paddingLeft="@dimen/padding_left_and_right">
             <TextView
+                android:id="@+id/author"
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:textStyle="bold"
+                android:textColor="@color/black0"
                 android:singleLine="true"
-                android:text="Name"/>
+                android:textSize="15dp"
+                android:text="author"/>
             <TextView
+                android:id="@+id/time"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
+                android:textColor="@color/gray7"
+                android:singleLine="true"
+                android:textSize="12dp"
                 android:text="time"/>
         </LinearLayout>
     </LinearLayout>
 
     <TextView
+        android:id="@+id/text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:paddingLeft="5dp"
+        android:paddingBottom="2dp"
         android:ellipsize="end"
         android:maxLines="7"
+        android:textColor="@color/black0"
         android:text="lsjdflkajsdflaksdfjalkdlsjdflkajsdflaksdfjalkdlsjdflkajsdflaksdfjalkdlsjdflkajsdflaksdfjalkdlsjdflkajsdflaksdfjalkdlsjdflkajsdflaksdfjalkdlsjdflkajsdflaksdfjalkdlsjdflkajsdflaksdfjalkdlsjdflkajsdflaksdfjalkdlsjdflkajsdflaksdfjalkdlsjdflkajsdflaksdfjalkdlsjdflkajsdflaksdfjalkdlsjdflkajsdflaksdfjalkdlsjdflkajsdflaksdfjalkdlsjdflkajsdflaksdfjalkdlsjdflkajsdflaksdfjalkdlsjdflkajsdflaksdfjalkdlsjdflkajsdflaksdfjalkdlsjdflkajsdflaksdfjalkdlsjdflkajsdflaksdfjalkdlsjdflkajsdflaksdfjalkd" />
 
     <LinearLayout
@@ -50,20 +65,26 @@
         android:paddingTop="5dp"
         android:paddingBottom="5dp">
         <ImageView
+            android:id="@+id/share"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="20dp"
             android:layout_weight="1"
+            android:scaleType="fitCenter"
             android:src="@drawable/ic_share"/>
         <ImageView
+            android:id="@+id/comment"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="20dp"
             android:layout_weight="1"
-            android:src="@drawable/ic_favorite"/>
-        <ImageView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:scaleType="fitCenter"
             android:src="@drawable/ic_comment"/>
+        <ImageView
+            android:id="@+id/like"
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_like"/>
 
     </LinearLayout>
 </LinearLayout>

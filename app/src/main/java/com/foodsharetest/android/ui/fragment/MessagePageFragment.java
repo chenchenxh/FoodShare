@@ -36,9 +36,9 @@ public class MessagePageFragment extends Fragment{
         view = inflater.inflate(R.layout.fragment_message_page, container, false);
         vpager = (ViewPager)view.findViewById(R.id.view_pager);
         tabLayout = (TabLayout)view.findViewById(R.id.tab_layout);
-        message_view = layoutInflater.inflate(R.layout.viewpager_message_pager, null,false);
+        message_view = layoutInflater.inflate(R.layout.viewpager_message_pager, null,false);  //两个View
         inform_view = layoutInflater.inflate(R.layout.viewpager_inform_pager, null,false);
-        recyclerView_message = (RecyclerView)message_view.findViewById(R.id.recycler_view_message);
+        recyclerView_message = (RecyclerView)message_view.findViewById(R.id.recycler_view_message);  //两个recycleView
         recyclerView_inform = (RecyclerView)inform_view.findViewById(R.id.recycler_view_inform);
 
         initView();
